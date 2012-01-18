@@ -28,7 +28,7 @@ echo json_encode( array(
 		start => mktime(17,0,0,12,24,date("Y")),
 		end => mktime(23,59,59,12,24,date("Y")),
 		cssclass => "xmas",
-		data => 'Heilig Abend<br/><img src="data/img/rudi.jpg" style="width:100%;height:auto;"/>' ),
+		data => 'Harley Abend<br/><img src="data/img/harley-engine.jpg" style="width:100%;height:auto;"/>' ),
 	array(
 		id => 6,
 		start => mktime(0,0,0,12,31,date("Y")),
