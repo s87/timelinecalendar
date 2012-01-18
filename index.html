@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Timeline Calendar</title>
+<link rel="stylesheet" type="text/css" href="css/timelineCalendar.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-mousewheel-3.0.6/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/timelinecalendar.js"></script>
+<script type="text/javascript">
+$(document).ready( function() {
+	var cal = new TimelineCalendar( $("#calendar") );
+	cal.onDraw = function(options)
+	{
+		$("#startDate").html((options.startDate.getMonth()+1)+"/"+(options.startDate.getYear()+1900));
+	};
+	/*cal.onItemMoved = function( event )
+	{
+		var item = event.item.node;
+		var pos = item.position();
+		console.log( new Date( event.item.start*1000 )+" "+new Date( event.item.end*1000 ) );
+		console.log( "MEINE EIGENE onItemMoved "+pos.left+" "+event.item.start+" "+event.item.end );
+	}*/
+	cal.create();
+	
+	$("#zoomin").click( function() { cal.zoomIn(); } );
+	$("#zoomout").click( function() { cal.zoomOut(); } );
+	$("#past").click( function() { cal.goPast(); } );
+	$("#future").click( function() { cal.goFuture(); } );
+	
+} );
+</script>
+</head>
+<body>
+<h1>Timeline Calendar</h1>
+<div>
+<a href="#" id="past">past</a> -
+<a href="#" id="zoomin">zoom in</a> - <a href="#" id="zoomout">zoom out</a> -
+<a href="#" id="future">future</a>
+</div>
+
+<h2 id="startDate"></h2>
+<div id="calendar" class="timelineCalendar"></div>
+
+<section>
+<h2>Methods</h2>
+<dl>
+	<dt>zoomIn()</dt>
+	<dd></dd>
+	<dt>zoomOut()</dt>
+	<dd></dd>
+	<dt>goPast()</dt>
+	<dd></dd>
+	<dt>goFuture()</dt>
+	<dd></dd>
+</dl>
+</section>
+
+<section>
+<h2>Events</h2>
+<dl>
+	<dt>onItemMoved( event )</dt>
+	<dd>If a item was moved. event containts the itemobject "node" and the computed "start"/"end" timestamps</dd>
+	<dt>onItemResized( event )</dt>
+	<dd>If a item was resized. event containts the itemobject "node" and the computed "start"/"end" timestamps</dd>
+	<dt>onDraw( event )</dt>
+	<dd>The calendar was drawn. E.g. after zoom or a step in the future.</dd>
+</dl>
+</section>
+</body>
+</html>
