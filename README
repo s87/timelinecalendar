@@ -1,1 +1,9 @@
 Javascript calendar with zoom and move events
+
+Work in progress!
+
+Checkout the files and copy them to a directory in your webspace.
+Take a look at fetch_data.php. This script is returns the appointments/dates.
+
+As soon as possible you'll see a demo on http://s87.de/dev/timelinecalendar
+
