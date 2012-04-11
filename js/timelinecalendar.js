@@ -223,7 +223,7 @@ var TimelineCalendar = function(element)
 		var zoomLevelDays = this.getZoomLevelOffset(options.zoomLevel);
 		var tl = this;
 		$.getJSON(
-			  "fetch_data.php",
+			  "stores/fetch_data.php",
 			  {
 				  start : currentDate,
 				  offset : zoomLevelDays

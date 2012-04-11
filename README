@@ -1,9 +1,21 @@
 Javascript calendar with zoom and move events
 
-Work in progress!
-
 Checkout the files and copy them to a directory in your webspace.
 Take a look at fetch_data.php. This script is returns the appointments/dates.
 
-As soon as possible you'll see a demo on http://s87.de/dev/timelinecalendar
+You can see a demo on http://s87.de/dev/timelinecalendar/
 
+For implementing a datastore you have to create a file in json-format.
+Each item has to contain the following values.
+
+The start/end values are given as cgi-parameters named start and offset.
+
+{
+	id : int,
+	start : timestamp,
+	end : timestamp,
+	data : text
+}
+
+There is also an example store in stores folder for perl and a simple 
+php skript.
