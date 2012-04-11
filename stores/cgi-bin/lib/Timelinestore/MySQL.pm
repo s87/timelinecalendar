@@ -78,11 +78,3 @@ http://github.com/s87/timelinecalendar/
 Holger Graf-Reichrt, holger@s87.de
 
 =head1 CHANGES
-
-=over 1
-
-=item 2012/04/12
-
-Initial write. Replaces the DirWatchService in C++.
-
-=back

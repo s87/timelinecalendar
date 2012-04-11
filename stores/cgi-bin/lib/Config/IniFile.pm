@@ -1,9 +1,5 @@
 package Config::IniFile;
 
-use strict;
-use warnings;
-use Data::Dumper;
-
 sub new
 {
 	my $class = shift;
@@ -94,7 +90,7 @@ __END__
 
 =head1 NAME
 
-DirWatchService::ConfigIniFile
+Config::IniFile
 
 =head1 DESCRIPTION
 
