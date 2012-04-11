@@ -1,1 +1,4 @@
 stores/cgi-bin/config*.ini
+build.xml
+build.properties
+rsync.upload.excludes
